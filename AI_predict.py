@@ -2,7 +2,13 @@ import  pandas_datareader
 from datetime import date
 
 code='510050.SS'
-stock=pandas_datareader.get_data_yahoo(code,'2010-01-01',(date.today()))
+success = False
+while not success:
+    try:
+        stock=pandas_datareader.get_data_yahoo(code,'2010-01-01',(date.today()))
+        success = True
+    except:
+        pass 
 stock.to_csv('.//data//'+code+'.csv')
 # stock.to_csv('.//wjq_data//'+code+'.csv')
 print("数据更新到:")
