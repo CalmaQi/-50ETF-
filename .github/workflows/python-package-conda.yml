@@ -24,5 +24,4 @@ jobs:
     - name: Test with pytest
       run: |
         conda install requests
-        
         python test.py
