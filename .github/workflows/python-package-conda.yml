@@ -18,7 +18,6 @@ jobs:
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
         echo $CONDA/bin >> $GITHUB_PATH
-        source .bashrc
     - name: Install dependencies
       run: |
         pip install -r requirement.yml
