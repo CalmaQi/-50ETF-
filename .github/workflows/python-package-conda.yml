@@ -21,7 +21,10 @@ jobs:
     - name: Install dependencies
       run: |
         conda env update --file environment.yml --name base
-    - name: Test with pytest
+    - name: LS
+      run: |
+        ls ${{ github.workspace }}
+    - name: Test 
       run: |
         conda install requests
         python test.py
