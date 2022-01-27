@@ -20,7 +20,7 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
-        pip install -r requirement.yml
+        pip install -r environment.yml
     - name: Test 
       run: |
         python test.py
